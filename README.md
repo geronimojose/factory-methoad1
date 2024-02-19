@@ -100,3 +100,36 @@ class Oracle implements Bd {
     print ("desconectar con oracle");
   }
 }
+
+ejemplo de data 
+
+void main() {
+  Fabrica fabrica = Fabrica();
+  Data d = fabrica.getdata(2);
+  d.data;
+}
+class Fabrica{
+  Data getdata (int tipo){
+    if (tipo == 1){
+      return Resqres();
+    }else{
+      return Mypokeapi();
+    }
+  }
+}
+abstract class Data{
+  void data();
+}
+
+class Resqres implements Data{
+  @override
+  void data(){
+    print("uste esta usando reqres");
+  }
+}
+class Mypokeapi implements Data{
+  @override
+  void data(){
+    print("uste esta usando mypokeapi");
+  }
+}
